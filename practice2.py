@@ -188,7 +188,6 @@ def exam_clean():
     data['qualify'] = data['qualify'].map({'yes': True, 'no': False})
     print(data)
 
-
 def lowercase_null():
 
     exam_data = {'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'],
@@ -243,8 +242,6 @@ def avg_by_gender():
     for gender, groups in gender_groups:
         print(gender, groups['mark'].mean())
 
-        
-
 def purchase_min_max():
 
     orders_data = pd.DataFrame({
@@ -259,4 +256,3 @@ def purchase_min_max():
         print('customer_id ' + str(customer), 'mean ' + str(customer_data['purch_amt'].mean()), 'min ' + str(customer_data['purch_amt'].min()), 'max ' + str(customer_data['purch_amt'].max()))
         print('\n')
 
-purchase_min_max()
