@@ -1,7 +1,12 @@
 import pandas as pd 
 
-data =pd.read_excel('Superstore.xls')
+data =pd.read_csv('Sample - Superstore.csv')
 
-print(data.head())
+#print order ID of sales > 500 
 
-/Users/tylerpatrick/Documents/GitHub/Data-Analysis-With-Python/Sample - Superstore.xls
+#filter_df = data[data['Sales' ] > 500 ] 
+#print(filter_df[['Order ID', 'Sales']])
+
+inner_join = pd.merge(data,data, on=['Order ID', 'Sales'], how='inner')
+print(inner_join)
+
