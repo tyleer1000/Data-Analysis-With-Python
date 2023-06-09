@@ -1,14 +1,14 @@
 import sqlite3
 import pandas as pd
 
-conn = sqlite3.connect('hw3.db')
-query = "SELECT name FROM sqlite_master WHERE type='table'"
+#conn = sqlite3.connect('hw3.db')
+#query = "SELECT name FROM sqlite_master WHERE type='table'"
 
 # data = pd.read_sql_query(query, conn)
 # print(data.head(5))
 # query2 ="SELECT * FROM games"
 
-# datagames = pd.read_sql_query(query2, conn)
+datagames = pd.read_sql_query(query2, conn)
 # print(datagames.head(4))
 
 #give names of games where avgscore is higher than 7
@@ -27,6 +27,10 @@ def highest_designer():
 
     Triple inner join on games, desgame, designers 
     """
+    conn = sqlite3.connect('hw3.db')
+    query = ("SELECT name FROM sqlite_master WHERE type='table'")
+    data_tables = pd.read_sql_query(query, conn)
+    print(data_tables.head(5))
     query2 = "SELECT * FROM games"
     query3 = "SELECT * FROM desgame"
     query4 = "SELECT * FROM designers"
