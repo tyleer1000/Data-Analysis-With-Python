@@ -1,1 +1,0 @@
-create Table practice(salary int, empid int, department varchar(50))
