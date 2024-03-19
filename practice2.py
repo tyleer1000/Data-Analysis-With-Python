@@ -80,7 +80,6 @@ def class3_avg():
         
     data = pd.read_csv("student.csv")
 
-
     class3 = data[data['class']== 'Three'].set_index('id')
 
     print(class3['name'].to_list())
