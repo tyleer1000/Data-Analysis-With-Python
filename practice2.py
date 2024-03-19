@@ -255,3 +255,4 @@ def purchase_min_max():
         print('customer_id ' + str(customer), 'mean ' + str(customer_data['purch_amt'].mean()), 'min ' + str(customer_data['purch_amt'].min()), 'max ' + str(customer_data['purch_amt'].max()))
         print('\n')
 
+purchase_min_max()
