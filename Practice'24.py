@@ -56,7 +56,14 @@ def clean_invoice():
     data['Invoice'] = data['Invoice'].str.replace(",", "")
     data['Invoice'] = data['Invoice'].str.replace("$", "")
     data['Invoice'] = data['Invoice'].astype(float)
-    print(data.dtypes)
-    print(data.head(5))
+    #data['Invoice'] = data['Invoice'] * 2
+    data['High Invoice'] = data['Invoice'] > 30000
+    filter_data = data[data['Invoice'] > 30000]
+
+    filter_data2 = data[(data['Invoice'] > 30000) & (data['Cylinders'] > 4)]
+    #print(data.dtypes)
+    #print(data.head(5))
+    print(filter_data2.head())
 
 clean_invoice()
+
