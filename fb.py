@@ -9,3 +9,5 @@ while i < 100:
     else:
         print(i)
     i = i + 1
+
+#fizzbuzz
