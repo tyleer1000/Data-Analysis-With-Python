@@ -85,7 +85,7 @@ def worst_state():
 def top_three_state_profits():
 
 
-    #create list of tuples (Profit, State)
+    #create list of tuples (Profit, State) practice
     state_profit_list = []
     grouped_states = data.groupby('State')
     for state, group in grouped_states:
